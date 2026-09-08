@@ -1,0 +1,1711 @@
+```html
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Hoşgeldin Beyzamm 🤎</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      overflow-x: hidden;
+
+      font-family: "Comfortaa", cursive;
+
+      color: #fff;
+
+      background:
+        radial-gradient(
+          circle at 50% 5%,
+          rgba(125, 25, 48, .55),
+          transparent 32%
+        ),
+        radial-gradient(
+          circle at 10% 70%,
+          rgba(100, 15, 38, .35),
+          transparent 35%
+        ),
+        linear-gradient(
+          160deg,
+          #21050d,
+          #4a0b1b 48%,
+          #190308
+        );
+    }
+
+    /* =====================================================
+       ARKA PLAN IŞIKLARI
+    ===================================================== */
+
+    body::before,
+    body::after {
+
+      content: "";
+
+      position: fixed;
+
+      width: 55vw;
+      height: 55vw;
+
+      max-width: 500px;
+      max-height: 500px;
+
+      border-radius: 50%;
+
+      filter: blur(90px);
+
+      opacity: .13;
+
+      pointer-events: none;
+
+      z-index: -1;
+
+      animation:
+        ambientMove 10s ease-in-out infinite alternate;
+    }
+
+    body::before {
+
+      background: #8e1d3b;
+
+      left: -25%;
+      top: 5%;
+    }
+
+    body::after {
+
+      background: #69132e;
+
+      right: -25%;
+      bottom: 5%;
+
+      animation-delay: -5s;
+    }
+
+    @keyframes ambientMove {
+
+      from {
+        transform:
+          translate(0, 0)
+          scale(1);
+      }
+
+      to {
+        transform:
+          translate(30px, -35px)
+          scale(1.2);
+      }
+    }
+
+
+    /* =====================================================
+       AÇILIŞ
+    ===================================================== */
+
+    .opening {
+
+      position: fixed;
+
+      inset: 0;
+
+      z-index: 10000;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      background:
+        radial-gradient(
+          circle at center,
+          #571025,
+          #26060f 65%,
+          #130207
+        );
+
+      animation:
+        openingFade 2.8s ease forwards;
+
+      animation-delay: 1.7s;
+
+      pointer-events: none;
+    }
+
+
+    /* EMOJİ DEĞİL, SADE KALP */
+
+    .opening-heart {
+
+      width: 55px;
+      height: 55px;
+
+      position: relative;
+
+      transform: rotate(-45deg);
+
+      background: #6e392f;
+
+      border-radius: 8px;
+
+      box-shadow:
+        0 0 25px rgba(130, 70, 55, .35),
+        0 0 60px rgba(100, 30, 35, .25);
+
+      animation:
+        heartOpening 1.7s ease-in-out infinite;
+    }
+
+    .opening-heart::before,
+    .opening-heart::after {
+
+      content: "";
+
+      position: absolute;
+
+      width: 55px;
+      height: 55px;
+
+      background: #6e392f;
+
+      border-radius: 50%;
+    }
+
+    .opening-heart::before {
+
+      top: -27px;
+      left: 0;
+    }
+
+    .opening-heart::after {
+
+      top: 0;
+      left: 27px;
+    }
+
+
+    @keyframes heartOpening {
+
+      0% {
+        transform:
+          rotate(-45deg)
+          scale(.75);
+
+        opacity: .4;
+      }
+
+      50% {
+        transform:
+          rotate(-45deg)
+          scale(1);
+
+        opacity: 1;
+      }
+
+      100% {
+        transform:
+          rotate(-45deg)
+          scale(.75);
+
+        opacity: .4;
+      }
+    }
+
+
+    @keyframes openingFade {
+
+      0% {
+        opacity: 1;
+      }
+
+      75% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+
+    /* =====================================================
+       ANA SAYFA
+    ===================================================== */
+
+    .container {
+
+      width: 100%;
+
+      min-height: 400vh;
+
+      padding:
+        clamp(55px, 12vw, 100px)
+        4vw
+        160px;
+    }
+
+
+    /* =====================================================
+       HOŞGELDİN
+    ===================================================== */
+
+    .welcome-box {
+
+      position: relative;
+
+      width: min(92vw, 500px);
+
+      margin: 0 auto;
+
+      padding:
+        clamp(27px, 7vw, 42px);
+
+      text-align: center;
+
+      background:
+        rgba(255,255,255,.055);
+
+      border:
+        1px solid rgba(255,255,255,.14);
+
+      border-radius: 30px;
+
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+
+      box-shadow:
+        0 25px 70px rgba(0,0,0,.38),
+        inset 0 0 35px rgba(255,255,255,.025);
+
+      animation:
+        welcomeIn 1.4s ease both;
+    }
+
+
+    .welcome-box::before {
+
+      content: "♡";
+
+      position: absolute;
+
+      top: -17px;
+      left: 50%;
+
+      transform:
+        translateX(-50%);
+
+      width: 36px;
+      height: 36px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background: #641328;
+
+      box-shadow:
+        0 0 25px rgba(170,40,70,.35);
+
+      font-size: 19px;
+    }
+
+
+    .welcome-box h1 {
+
+      margin: 0;
+
+      font-size:
+        clamp(25px, 7vw, 42px);
+
+      line-height: 1.25;
+
+      text-shadow:
+        0 5px 25px rgba(0,0,0,.35);
+    }
+
+
+    .welcome-box p {
+
+      margin-top: 16px;
+
+      font-size:
+        clamp(13px, 3.5vw, 16px);
+
+      line-height: 1.6;
+
+      opacity: .68;
+    }
+
+
+    @keyframes welcomeIn {
+
+      from {
+
+        opacity: 0;
+
+        transform:
+          translateY(35px)
+          scale(.94);
+      }
+
+      to {
+
+        opacity: 1;
+
+        transform:
+          translateY(0)
+          scale(1);
+      }
+    }
+
+
+    /* =====================================================
+       FOTOĞRAFLAR
+    ===================================================== */
+
+    .photos {
+
+      position: relative;
+
+      width: 100%;
+
+      max-width: 650px;
+
+      height:
+        min(130vw, 680px);
+
+      min-height: 420px;
+
+      margin:
+        clamp(130px, 24vw, 190px)
+        auto
+        0;
+    }
+
+
+    .photo-frame {
+
+      position: absolute;
+
+      left: 50%;
+      bottom: 0;
+
+      width:
+        clamp(175px, 62vw, 360px);
+
+      aspect-ratio: .70;
+
+      padding:
+        clamp(7px, 1.8vw, 11px);
+
+      background: #fff;
+
+      border-radius:
+        clamp(15px, 4vw, 25px);
+
+      box-shadow:
+        0 25px 55px rgba(0,0,0,.5),
+        0 0 30px rgba(255,255,255,.05);
+
+      overflow: hidden;
+
+      transform-origin:
+        50% 100%;
+
+      transition:
+        transform 1s cubic-bezier(.2,.8,.2,1);
+    }
+
+
+    .photo-frame img {
+
+      width: 100%;
+      height: 100%;
+
+      display: block;
+
+      object-fit: cover;
+
+      border-radius:
+        clamp(10px, 3vw, 18px);
+
+      user-select: none;
+
+      -webkit-user-drag: none;
+    }
+
+
+    .photo-frame:nth-child(1) {
+
+      transform:
+        translateX(-50%)
+        rotate(-31deg);
+
+      z-index: 1;
+    }
+
+
+    .photo-frame:nth-child(2) {
+
+      transform:
+        translateX(-50%)
+        rotate(0deg);
+
+      z-index: 2;
+    }
+
+
+    .photo-frame:nth-child(3) {
+
+      transform:
+        translateX(-50%)
+        rotate(31deg);
+
+      z-index: 1;
+    }
+
+
+    /* =====================================================
+       HİKAYE KUTULARI
+    ===================================================== */
+
+    .story {
+
+      width:
+        min(92vw, 560px);
+
+      margin-left: auto;
+      margin-right: auto;
+
+      padding:
+        clamp(27px, 7vw, 42px);
+
+      text-align: center;
+
+      background:
+        rgba(255,255,255,.055);
+
+      border:
+        1px solid rgba(255,255,255,.13);
+
+      border-radius: 32px;
+
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+
+      box-shadow:
+        0 25px 75px rgba(0,0,0,.35);
+
+      opacity: 0;
+
+      transform:
+        translateY(70px)
+        scale(.94);
+
+      transition:
+        opacity 1.2s ease,
+        transform 1.3s cubic-bezier(.2,.8,.2,1);
+    }
+
+
+    .story.show {
+
+      opacity: 1;
+
+      transform:
+        translateY(0)
+        scale(1);
+    }
+
+
+    .story-heart {
+
+      display: block;
+
+      margin-bottom: 17px;
+
+      font-size:
+        clamp(25px, 7vw, 40px);
+
+      animation:
+        softBeat 2.4s ease-in-out infinite;
+    }
+
+
+    @keyframes softBeat {
+
+      0%, 100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.12);
+      }
+    }
+
+
+    .story h2 {
+
+      margin: 0;
+
+      font-size:
+        clamp(21px, 5.7vw, 33px);
+
+      line-height: 1.45;
+    }
+
+
+    .story p {
+
+      margin:
+        16px 0 0;
+
+      font-size:
+        clamp(13px, 3.6vw, 16px);
+
+      line-height: 1.8;
+
+      opacity: .68;
+    }
+
+
+    /* =====================================================
+       ÖZEL MESAFELER
+    ===================================================== */
+
+    #questionBox {
+
+      margin-top:
+        clamp(190px, 42vw, 330px);
+    }
+
+
+    #readyBox {
+
+      margin-top:
+        clamp(260px, 60vw, 460px);
+    }
+
+
+    #answerBox {
+
+      position: relative;
+
+      margin-top:
+        clamp(330px, 75vw, 550px);
+
+      margin-bottom: 150px;
+
+      padding:
+        clamp(30px, 8vw, 48px);
+
+      overflow: hidden;
+    }
+
+
+    /* =====================================================
+       SON SORU ÖZEL IŞIK
+    ===================================================== */
+
+    #answerBox::before {
+
+      content: "";
+
+      position: absolute;
+
+      width: 180px;
+      height: 180px;
+
+      left: 50%;
+      top: -90px;
+
+      transform:
+        translateX(-50%);
+
+      border-radius: 50%;
+
+      background:
+        rgba(130,35,55,.35);
+
+      filter: blur(40px);
+
+      animation:
+        questionGlow 3s ease-in-out infinite alternate;
+    }
+
+
+    @keyframes questionGlow {
+
+      from {
+        opacity: .3;
+        transform:
+          translateX(-50%)
+          scale(.8);
+      }
+
+      to {
+        opacity: .8;
+        transform:
+          translateX(-50%)
+          scale(1.25);
+      }
+    }
+
+
+    #answerBox h2 {
+
+      position: relative;
+
+      font-size:
+        clamp(22px, 6.2vw, 36px);
+
+      line-height: 1.5;
+    }
+
+
+    /* =====================================================
+       TEXTAREA
+    ===================================================== */
+
+    textarea {
+
+      position: relative;
+
+      width: 100%;
+
+      min-height: 135px;
+
+      margin-top: 25px;
+
+      padding: 17px;
+
+      resize: none;
+
+      font-family:
+        "Comfortaa", cursive;
+
+      font-size: 14px;
+
+      line-height: 1.65;
+
+      color: #fff;
+
+      background:
+        rgba(0,0,0,.18);
+
+      border:
+        1px solid rgba(255,255,255,.14);
+
+      border-radius: 20px;
+
+      outline: none;
+
+      transition:
+        .3s ease;
+    }
+
+
+    textarea::placeholder {
+
+      color:
+        rgba(255,255,255,.45);
+    }
+
+
+    textarea:focus {
+
+      border-color:
+        rgba(210,100,125,.65);
+
+      box-shadow:
+        0 0 30px rgba(110,20,45,.3);
+    }
+
+
+    /* =====================================================
+       BUTON
+    ===================================================== */
+
+    .send-button {
+
+      position: relative;
+
+      width: 100%;
+
+      margin-top: 16px;
+
+      padding: 17px;
+
+      border: none;
+
+      border-radius: 19px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #681329,
+          #a62d4d
+        );
+
+      color: white;
+
+      font-family:
+        "Comfortaa", cursive;
+
+      font-size: 15px;
+
+      font-weight: 700;
+
+      cursor: pointer;
+
+      box-shadow:
+        0 15px 35px rgba(70,5,25,.4);
+
+      transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+    }
+
+
+    .send-button:active {
+
+      transform:
+        scale(.97);
+    }
+
+
+    .send-button:hover {
+
+      transform:
+        translateY(-2px);
+
+      box-shadow:
+        0 20px 40px rgba(70,5,25,.55);
+    }
+
+
+    /* =====================================================
+       BAŞARI
+    ===================================================== */
+
+    #successBox {
+
+      display: none;
+
+      margin-top: 35px;
+    }
+
+
+    #successBox.show {
+
+      display: block;
+
+      animation:
+        successIn 1.2s ease both;
+    }
+
+
+    @keyframes successIn {
+
+      from {
+
+        opacity: 0;
+
+        transform:
+          translateY(25px)
+          scale(.85);
+      }
+
+      to {
+
+        opacity: 1;
+
+        transform:
+          translateY(0)
+          scale(1);
+      }
+    }
+
+
+    .success-heart {
+
+      font-size:
+        clamp(50px, 14vw, 80px);
+
+      animation:
+        successBeat 1.4s ease-in-out infinite alternate;
+    }
+
+
+    @keyframes successBeat {
+
+      from {
+        transform: scale(1);
+      }
+
+      to {
+        transform: scale(1.13);
+      }
+    }
+
+
+    /* =====================================================
+       PARÇACIKLAR
+    ===================================================== */
+
+    .particle {
+
+      position: fixed;
+
+      top: -50px;
+
+      z-index: 999;
+
+      pointer-events: none;
+
+      animation:
+        fall linear forwards;
+
+      filter:
+        drop-shadow(
+          0 0 8px rgba(255,130,160,.3)
+        );
+    }
+
+
+    @keyframes fall {
+
+      0% {
+
+        transform:
+          translateY(-60px)
+          rotate(0deg);
+
+        opacity: 0;
+      }
+
+      10% {
+        opacity: .9;
+      }
+
+      80% {
+        opacity: .8;
+      }
+
+      100% {
+
+        transform:
+          translateY(110vh)
+          rotate(360deg);
+
+        opacity: 0;
+      }
+    }
+
+
+    /* =====================================================
+       PARILTI
+    ===================================================== */
+
+    .sparkle {
+
+      position: fixed;
+
+      pointer-events: none;
+
+      z-index: 500;
+
+      animation:
+        sparkleOut 1.5s ease forwards;
+    }
+
+
+    @keyframes sparkleOut {
+
+      0% {
+
+        opacity: 0;
+
+        transform:
+          scale(.2)
+          rotate(0deg);
+      }
+
+      30% {
+        opacity: 1;
+      }
+
+      100% {
+
+        opacity: 0;
+
+        transform:
+          scale(1.5)
+          rotate(90deg);
+      }
+    }
+
+
+    /* =====================================================
+       KALP PATLAMASI
+    ===================================================== */
+
+    .burst-heart {
+
+      position: fixed;
+
+      z-index: 5000;
+
+      pointer-events: none;
+
+      font-size: 20px;
+
+      animation:
+        burst .9s ease-out forwards;
+    }
+
+
+    @keyframes burst {
+
+      0% {
+
+        opacity: 1;
+
+        transform:
+          translate(0,0)
+          scale(.5);
+      }
+
+      100% {
+
+        opacity: 0;
+
+        transform:
+          translate(
+            calc((var(--x) - 50) * 1px),
+            calc((var(--y) - 50) * 1px)
+          )
+          scale(1.3);
+      }
+    }
+
+
+    /* =====================================================
+       MOBİL
+    ===================================================== */
+
+    @media (max-width: 500px) {
+
+      .photos {
+
+        height: 130vw;
+
+        min-height: 390px;
+      }
+
+      .photo-frame {
+
+        width: 61vw;
+      }
+
+    }
+
+
+    @media (min-width: 700px) {
+
+      .photo-frame {
+
+        width:
+          min(32vw, 360px);
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       AÇILIŞ
+  ===================================================== -->
+
+  <div class="opening">
+
+    <div class="opening-heart"></div>
+
+  </div>
+
+
+  <main class="container">
+
+
+    <!-- ===================================================
+         HOŞGELDİN
+    =================================================== -->
+
+    <section class="welcome-box">
+
+      <h1>
+        Hoşgeldin Beyzamm 🤎
+      </h1>
+
+      <p>
+        Senin için küçük bir şey hazırladım...
+      </p>
+
+    </section>
+
+
+    <!-- ===================================================
+         FOTOĞRAFLAR
+    =================================================== -->
+
+   <section class="photos">
+
+  <div class="photo-frame">
+    <img src="./resim1.png" alt="">
+  </div>
+
+  <div class="photo-frame">
+    <img src="./resim2.png" alt="">
+  </div>
+
+  <div class="photo-frame">
+    <img src="./resim3.png" alt="">
+  </div>
+
+</section>
+
+
+    <!-- ===================================================
+         1. AŞAMA
+    =================================================== -->
+
+    <section
+      class="story"
+      id="questionBox"
+    >
+
+      <span class="story-heart">
+        ♡
+      </span>
+
+      <h2>
+        Bunu Daha Önce Sormalıydım Belki de..
+      </h2>
+
+      <p>
+        Ama bazı şeyleri söylemek için doğru zamanı beklemek gerekiyor.
+      </p>
+
+    </section>
+
+
+    <!-- ===================================================
+         2. AŞAMA
+    =================================================== -->
+
+    <section
+      class="story"
+      id="readyBox"
+    >
+
+      <span class="story-heart">
+        🤎
+      </span>
+
+      <h2>
+        Hazır mısın?
+      </h2>
+
+      <p>
+        Çünkü şimdi sana gerçekten söylemek istediğim bir şey var...
+      </p>
+
+    </section>
+
+
+    <!-- ===================================================
+         3. AŞAMA
+    =================================================== -->
+
+    <section
+      class="story"
+      id="answerBox"
+    >
+
+      <span class="story-heart">
+        ♡
+      </span>
+
+      <h2>
+        Benimle Çıkar mısın Birtanem? 🤎
+      </h2>
+
+      <p>
+        Umarım Cevabın Tahmin Ettiğim Cevaptır...
+      </p>
+
+
+      <textarea
+        id="answer"
+        placeholder="Cevabını buraya yazabilirsin beyzamm"
+      ></textarea>
+
+
+      <button
+        class="send-button"
+        id="sendButton"
+      >
+        Gönder 🤎
+      </button>
+
+
+      <!-- GÖNDERİLDİ -->
+
+      <div
+        id="successBox"
+      >
+
+        <div class="success-heart">
+          ♡
+        </div>
+
+        <h2>
+          Cevabın bana ulaştı 🤎
+        </h2>
+
+        <p>
+          Bu küçük anıyı burada bırakalım...
+        </p>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <script>
+
+
+    /* =====================================================
+       WEBHOOK
+    ===================================================== */
+
+    const WEBHOOK_URL =
+      "https://discord.com/api/webhooks/1546980796567519272/u_OVpgVvqf1dMhtisuXz5dmpenHtn9CKfg-lzooD2yCJWAobul8GFq_Mrk78NjYisGBG";
+
+
+    /* =====================================================
+       ELEMENTLER
+    ===================================================== */
+
+    const stories =
+      document.querySelectorAll(".story");
+
+
+    /* =====================================================
+       SCROLL STORY SİSTEMİ
+    ===================================================== */
+
+    const observer =
+      new IntersectionObserver(
+
+        entries => {
+
+          entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add("show");
+
+            }
+
+          });
+
+        },
+
+        {
+          threshold: .22
+        }
+
+      );
+
+
+    stories.forEach(story => {
+
+      observer.observe(story);
+
+    });
+
+
+    /* =====================================================
+       ROMANTİK PARÇACIKLAR
+    ===================================================== */
+
+    const particles = [
+
+      "🍫",
+      "🤎",
+      "♡",
+      "💗",
+      "✦",
+      "✧"
+
+    ];
+
+
+    function createParticle() {
+
+      const particle =
+        document.createElement("div");
+
+
+      particle.className =
+        "particle";
+
+
+      particle.textContent =
+        particles[
+          Math.floor(
+            Math.random() *
+            particles.length
+          )
+        ];
+
+
+      particle.style.left =
+        Math.random() * 100 +
+        "vw";
+
+
+      particle.style.fontSize =
+        13 +
+        Math.random() * 14 +
+        "px";
+
+
+      const duration =
+        4 +
+        Math.random() * 4;
+
+
+      particle.style.animationDuration =
+        duration + "s";
+
+
+      document.body.appendChild(
+        particle
+      );
+
+
+      setTimeout(
+
+        () => particle.remove(),
+
+        duration * 1000 + 500
+
+      );
+
+    }
+
+
+    let lastParticle = 0;
+
+
+    window.addEventListener(
+
+      "scroll",
+
+      () => {
+
+        const now =
+          Date.now();
+
+
+        /*
+          Daha seyrek parçacık.
+          Böylece romantik ama göz yorucu olmayan
+          bir görüntü oluşur.
+        */
+
+        if (
+          now - lastParticle >
+          230
+        ) {
+
+          lastParticle =
+            now;
+
+
+          createParticle();
+
+
+          if (
+            Math.random() > .78
+          ) {
+
+            createParticle();
+
+          }
+
+        }
+
+      },
+
+      {
+        passive: true
+      }
+
+    );
+
+
+    /* =====================================================
+       PARILTILAR
+    ===================================================== */
+
+    function createSparkle() {
+
+      const sparkle =
+        document.createElement("div");
+
+
+      sparkle.className =
+        "sparkle";
+
+
+      sparkle.textContent =
+        Math.random() > .5
+          ? "✦"
+          : "✧";
+
+
+      sparkle.style.left =
+        Math.random() * 100 +
+        "vw";
+
+
+      sparkle.style.top =
+        Math.random() * 100 +
+        "vh";
+
+
+      sparkle.style.fontSize =
+        9 +
+        Math.random() * 12 +
+        "px";
+
+
+      document.body.appendChild(
+        sparkle
+      );
+
+
+      setTimeout(
+
+        () => sparkle.remove(),
+
+        1500
+
+      );
+
+    }
+
+
+    setInterval(
+      createSparkle,
+      850
+    );
+
+
+    /* =====================================================
+       CEVAP GÖNDER
+    ===================================================== */
+
+    const answer =
+      document.getElementById(
+        "answer"
+      );
+
+
+    const sendButton =
+      document.getElementById(
+        "sendButton"
+      );
+
+
+    const successBox =
+      document.getElementById(
+        "successBox"
+      );
+
+
+    sendButton.addEventListener(
+
+      "click",
+
+      async () => {
+
+        const text =
+          answer.value.trim();
+
+
+        if (!text) {
+
+          answer.focus();
+
+          answer.style.borderColor =
+            "rgba(255,110,140,.8)";
+
+
+          setTimeout(
+
+            () => {
+
+              answer.style.borderColor =
+                "rgba(255,255,255,.14)";
+
+            },
+
+            1000
+
+          );
+
+          return;
+
+        }
+
+
+        sendButton.disabled =
+          true;
+
+
+        sendButton.textContent =
+          "Gönderiliyor... 🤎";
+
+
+        try {
+
+          await fetch(
+
+            WEBHOOK_URL,
+
+            {
+
+              method: "POST",
+
+              headers: {
+
+                "Content-Type":
+                  "application/json"
+
+              },
+
+              body: JSON.stringify({
+
+                username:
+                  "Beyzamm'ın Cevabı 🤎",
+
+                content:
+                  `💌 **Yeni bir cevap geldi!**\n\n${text}`
+
+              })
+
+            }
+
+          );
+
+
+          answer.style.display =
+            "none";
+
+
+          sendButton.style.display =
+            "none";
+
+
+          successBox.classList.add(
+            "show"
+          );
+
+
+          createHeartBurst();
+
+
+        }
+
+        catch (error) {
+
+          console.error(error);
+
+
+          sendButton.disabled =
+            false;
+
+
+          sendButton.textContent =
+            "Tekrar Gönder 🤎";
+
+
+          alert(
+            "Cevap gönderilemedi. Lütfen tekrar dene."
+          );
+
+        }
+
+      }
+
+    );
+
+
+    /* =====================================================
+       KALP PATLAMASI
+    ===================================================== */
+
+    function createHeartBurst() {
+
+      const hearts = [
+
+        "🤎",
+        "💗",
+        "♡",
+        "💕",
+        "✦"
+
+      ];
+
+
+      for (
+        let i = 0;
+        i < 25;
+        i++
+      ) {
+
+        const heart =
+          document.createElement(
+            "div"
+          );
+
+
+        heart.className =
+          "burst-heart";
+
+
+        heart.textContent =
+          hearts[
+            Math.floor(
+              Math.random() *
+              hearts.length
+            )
+          ];
+
+
+        heart.style.left =
+          "50%";
+
+
+        heart.style.top =
+          "70%";
+
+
+        heart.style.setProperty(
+
+          "--x",
+
+          Math.random() * 300 -
+          150
+
+        );
+
+
+        heart.style.setProperty(
+
+          "--y",
+
+          Math.random() * 300 -
+          150
+
+        );
+
+
+        document.body.appendChild(
+          heart
+        );
+
+
+        setTimeout(
+
+          () => heart.remove(),
+
+          1000
+
+        );
+
+      }
+
+    }
+
+
+    /* =====================================================
+       İLK PARÇACIKLAR
+    ===================================================== */
+
+    setTimeout(
+
+      () => {
+
+        for (
+          let i = 0;
+          i < 5;
+          i++
+        ) {
+
+          setTimeout(
+
+            createParticle,
+
+            i * 400
+
+          );
+
+        }
+
+      },
+
+      2600
+
+    );
+
+  </script>
+
+</body>
+</html>
+```
